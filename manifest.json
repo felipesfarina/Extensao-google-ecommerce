@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Alerta 2x",
+  "description": "Extensão Opera com funcionalidade para e-commerce.",
+  "version": "0.1.1",
+  "action": {
+    "default_title": "Alerta 2x"
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.shopee.com/*",
+        "*://*.shopee.com.br/*",
+        "*://*.mercadolivre.com.br/*"
+      ],
+      "js": ["content-highlighter.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "*://*.shopee.com/*",
+    "*://*.shopee.com.br/*",
+    "*://*.mercadolivre.com.br/*"
+  ]
+}
