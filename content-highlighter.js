@@ -11,7 +11,7 @@
   }
 
   function parseQuantityFromMercadoLivreText(text) {
-    // Expected formats (Portuguese): "1 unidade", "2 unidades" etc.
+    "1 unidade", "2 unidades" etc.
     const match = text.trim().match(/(\d+)/);
     return match ? parseInt(match[1], 10) : NaN;
   }
@@ -49,10 +49,11 @@
     warning.style.backgroundColor = '#fff3cd';
     warning.style.color = '#856404';
     warning.style.fontWeight = '600';
-    warning.style.padding = '6px 10px';
-    warning.style.margin = '6px 0';
-    warning.style.borderRadius = '4px';
-    warning.style.border = '1px solid #ffeeba';
+    warning.style.fontSize = '16px';
+    warning.style.padding = '16px 20px';
+    warning.style.margin = '10px 0';
+    warning.style.borderRadius = '6px';
+    warning.style.border = '2px solid #ffeeba';
 
     // Insere logo depois do card da Shopee (abaixo dele e acima da lista de pedidos)
     topCard.insertAdjacentElement('afterend', warning);
